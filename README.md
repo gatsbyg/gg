@@ -1,5 +1,7 @@
 # gg
 
+![Gatsby Graphics](logo.gif)
+
 ## Welcome
 
 Welcome to all Gatsby Graphics members!  We are adding members all the time and perhaps we should examine what our relationship is to Gatsby and to our world.
@@ -12,6 +14,6 @@ Today we are dealing with societal changes too and we are looking for ways to si
 
 ## Learning Lab
 
-The GG team will aim to on board people to GitHub is an easy fashion.
+The GG team will aim to on board people to GitHub in an easy fashion.
 
 Our focus will be on learning, graphics and Gatsby in general including GatsbyJS.
