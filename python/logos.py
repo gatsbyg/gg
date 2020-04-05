@@ -119,8 +119,8 @@ def create_images(logos_dir):
     cwd = os.getcwd()
     for f in glob.glob(os.path.join(logos_dir, "**.png")):
         d = os.path.splitext(os.path.basename(f))[0]
-        if not os.path.exists(os.path.join(cwd, "images", "logos", d)):
-            os.makedirs(os.path.join(cwd, "images", "logos", d))
+        if not os.path.exists(os.path.join(cwd, "images", "colormaps", d)):
+            os.makedirs(os.path.join(cwd, "images", "colormaps", d))
         img = plt.imread(f)
         lum_img = img[:, :, 1]
         i = 0
@@ -128,7 +128,7 @@ def create_images(logos_dir):
             for color in cmap_list:
                 i += 1
                 plt.imsave(
-                    os.path.join(cwd, "images/logos/%s/%s-%s.png" % (d, d, color)),
+                    os.path.join(cwd, "images/colormaps/%s/%s-%s.png" % (d, d, color)),
                     lum_img,
                     cmap="%s" % color,
                 )
