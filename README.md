@@ -2,6 +2,8 @@
 
 ![Gatsby Graphics](logo.gif)
 
+[![CircleCI](https://circleci.com/gh/gatsbyg/gg.svg?style=svg)](https://circleci.com/gh/gatsbyg/gg)
+
 ## Welcome
 
 Welcome to all Gatsby Graphics members!  We are adding members all the time and perhaps we should examine what our relationship is to Gatsby and to our world.
