@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.7.0-buster-node-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          key: dep-{{ checksum ".circleci/config.yml" }}-{{ checksum "requirements.txt" }}
+      - run:
+          name: 🏗️ Install the Python Dependencies 🐍
+          command: |
+            sudo apt update
+            sudo apt-get install aspell python3-pip
+            python3 --version
+            pip3 --version
+            sudo pip3 install --upgrade virtualenv --progress-bar off
+            python3 -m venv venv || virtualenv venv && . venv/bin/activate
+            sudo pip3 install -r requirements.txt
+      - save_cache:
+          key: dep-{{ checksum ".circleci/config.yml" }}-{{ checksum "requirements.txt" }}
+          paths:
+            - venv
+      - run:
+          name: 🧹 Run Flake8
+          command: |
+            flake8 --ignore=E501 --exclude=venv
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
