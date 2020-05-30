@@ -13,3 +13,5 @@ All the art made so far.
 ![Team JS Advance](images/logos/team-js-advance.jpg)
 
 ![Team Gopher](images/logos/team-gopher.png)
+
+![Beautiful Springtime](images/logos/beautiful-springtime-gatsby.jpg)
